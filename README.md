@@ -77,7 +77,3 @@ Frontend:
 cd frontend
 npm run build
 ```
-
-## Ghi chú khi nộp Git
-
-Các thư mục/file runtime hoặc dữ liệu sinh ra không được đưa lên Git: `ComfyUI_windows_portable/`, `node_modules/`, `.next/`, `.env.local`, `backend/chroma_data/`, `backend/uploads/`, log và cache build. Chỉ commit workflow JSON đã làm sạch trong `backend/workflows/comfyui/`; không commit API key thật.
