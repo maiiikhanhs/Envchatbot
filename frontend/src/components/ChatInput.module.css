@@ -1,0 +1,136 @@
+.wrapper {
+  padding: 0 24px 24px;
+  flex-shrink: 0;
+}
+
+.inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ── File preview ────────────────────────────────── */
+
+.filePreview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  padding: 8px 14px;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.fileName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.removeFile {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.removeFile:hover {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+/* ── Input container ─────────────────────────────── */
+
+.inputContainer {
+  display: flex;
+  align-items: flex-end;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 8px 12px;
+  box-shadow: var(--shadow-md);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filePreview + .inputContainer {
+  border-radius: 0 0 16px 16px;
+}
+
+.inputContainer:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.fileInput {
+  display: none;
+}
+
+.attachBtn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.attachBtn:hover {
+  color: var(--accent);
+  background: var(--bg-hover);
+}
+
+.textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 14.5px;
+  font-family: var(--font-sans);
+  resize: none;
+  padding: 8px 12px;
+  max-height: 150px;
+  line-height: 1.5;
+}
+
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.sendBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s;
+  margin-left: 8px;
+}
+
+.sendBtn:hover {
+  background: var(--accent-hover);
+  transform: scale(1.05);
+}
+
+.sendBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}

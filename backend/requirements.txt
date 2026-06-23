@@ -1,0 +1,12 @@
+python-docx
+pypdf
+pytest
+pymongo
+chromadb
+requests==2.31.0
+urllib3==2.2.3
+charset-normalizer==3.4.0
+chardet<6
+fastapi
+uvicorn[standard]
+python-multipart

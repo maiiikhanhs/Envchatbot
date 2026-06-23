@@ -1,0 +1,4834 @@
+{
+  "id": "2b454925-0db3-4ef5-8eb4-cdba6f59b4d7",
+  "revision": 2,
+  "last_node_id": 39,
+  "last_link_id": 86,
+  "nodes": [
+    {
+      "id": 27,
+      "type": "LLM",
+      "pos": [
+        2320,
+        260
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 50
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 51
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 52
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 53
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            54,
+            57
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Rút gọn câu trả lời tài liệu",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nChỉ trả kết quả cuối bằng tiếng Việt. Không phân tích. Không nhắc lại quy tắc.\n\nINPUT trong file_content là bản nháp từ File QA Specialist.\nKhông đọc lại file. Không đánh giá lại file content.\n\nNhiệm vụ: làm gọn INPUT, giữ facts và [FILE_SOURCE_n].\n\nQuy tắc:\n- Nếu INPUT có nội dung hợp lệ hoặc có [FILE_SOURCE_n], không được fallback.\n- Bỏ mọi phân tích nội bộ nếu có.\n- Không thêm facts mới.\n- Nếu INPUT đã rõ, giữ gần như nguyên văn.\n- Chỉ fallback khi INPUT rỗng, None, null hoặc chỉ là lỗi hệ thống.\n\nQuy tắc hiển thị an toàn cho UI:\n- Chỉ trả văn bản Unicode UTF-8 thuần, có thể hiển thị trực tiếp trên giao diện web.\n- Không dùng LaTeX, MathJax, công thức Markdown hoặc ký hiệu dạng $...$, \\(...\\), \\[...\\].\n- Không dùng \\text{}, \\mathrm{}, \\mu, _{}, ^{}, dấu \\ escape hoặc HTML entity.\n- Không dùng code block.\n- Không tự chuyển chỉ tiêu, đơn vị sang công thức toán học.\n- Viết chỉ tiêu bằng plain text: SO2, NO2, CO, O3, PM2,5, PM10, TSP, BOD5, COD, pH, DO, TSS.\n- Viết đơn vị bằng plain text: µg/Nm3, mg/Nm3, mg/L, dBA, %, °C.\n- Nếu input có ký hiệu khó hiển thị, phải chuyển sang dạng plain text trước khi trả lời:\n  $\\text{SO}_2$ -> SO2\n  SO_{2} -> SO2\n  $\\text{PM}_{2,5}$ -> PM2,5\n  \\mu\\text{g/Nm}^3 -> µg/Nm3\n  µg/Nm^3 -> µg/Nm3\n  mg/Nm^3 -> mg/Nm3\n- Output cuối không được chứa các chuỗi: $, \\text, \\mathrm, \\mu, _{, }^, ^{.\n\nFallback đúng:\nChưa tìm thấy căn cứ phù hợp trong file được cung cấp để trả lời câu hỏi này.",
+        "",
+        0.1,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 10,
+      "type": "BN_StringContainMultiple",
+      "pos": [
+        1222.1416457988894,
+        192.47987071563713
+      ],
+      "size": [
+        400,
+        235.84375
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 7
+        },
+        {
+          "localized_name": "keywords",
+          "name": "keywords",
+          "type": "STRING",
+          "widget": {
+            "name": "keywords"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "match_mode",
+          "name": "match_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "match_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "case_sensitive",
+          "name": "case_sensitive",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "case_sensitive"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "result",
+          "name": "result",
+          "type": "BOOLEAN",
+          "links": [
+            19,
+            64,
+            73,
+            82,
+            83
+          ]
+        },
+        {
+          "localized_name": "debug_info",
+          "name": "debug_info",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "matches_count",
+          "name": "matches_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Route FILE_VS_KB",
+      "properties": {
+        "Node name for S&R": "BN_StringContainMultiple"
+      },
+      "widgets_values": [
+        "FILE_VS_KB",
+        "ANY",
+        false
+      ]
+    },
+    {
+      "id": 9,
+      "type": "BN_StringContainMultiple",
+      "pos": [
+        1216.03223101764,
+        102.52054778332516
+      ],
+      "size": [
+        400,
+        235.84375
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 6
+        },
+        {
+          "localized_name": "keywords",
+          "name": "keywords",
+          "type": "STRING",
+          "widget": {
+            "name": "keywords"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "match_mode",
+          "name": "match_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "match_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "case_sensitive",
+          "name": "case_sensitive",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "case_sensitive"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "result",
+          "name": "result",
+          "type": "BOOLEAN",
+          "links": [
+            15,
+            53,
+            58
+          ]
+        },
+        {
+          "localized_name": "debug_info",
+          "name": "debug_info",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "matches_count",
+          "name": "matches_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Route FILE_QA",
+      "properties": {
+        "Node name for S&R": "BN_StringContainMultiple"
+      },
+      "widgets_values": [
+        "FILE_QA",
+        "ANY",
+        false
+      ]
+    },
+    {
+      "id": 8,
+      "type": "BN_StringContainMultiple",
+      "pos": [
+        1187.4032668420414,
+        14.786203721435497
+      ],
+      "size": [
+        400,
+        235.84375
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 5
+        },
+        {
+          "localized_name": "keywords",
+          "name": "keywords",
+          "type": "STRING",
+          "widget": {
+            "name": "keywords"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "match_mode",
+          "name": "match_mode",
+          "type": "COMBO",
+          "widget": {
+            "name": "match_mode"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "case_sensitive",
+          "name": "case_sensitive",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "case_sensitive"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "result",
+          "name": "result",
+          "type": "BOOLEAN",
+          "links": [
+            11,
+            42,
+            47
+          ]
+        },
+        {
+          "localized_name": "debug_info",
+          "name": "debug_info",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "matches_count",
+          "name": "matches_count",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "title": "Route FILE_SUMMARY",
+      "properties": {
+        "Node name for S&R": "BN_StringContainMultiple"
+      },
+      "widgets_values": [
+        "FILE_SUMMARY",
+        "ANY",
+        false
+      ]
+    },
+    {
+      "id": 12,
+      "type": "LLM",
+      "pos": [
+        2330.8900886230463,
+        -399.93
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 39
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 40
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 41
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 42
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            43,
+            46
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Rút gọn bản tóm tắt",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nChỉ trả kết quả cuối bằng tiếng Việt. Không phân tích. Không nhắc lại quy tắc.\n\nINPUT trong file_content là bản nháp từ File Summary Specialist.\nKhông đọc lại file. Không đánh giá lại file content.\n\nNhiệm vụ: làm gọn INPUT, giữ facts và [FILE_SOURCE_n].\n\nQuy tắc:\n- Nếu INPUT có nội dung hợp lệ hoặc có [FILE_SOURCE_n], không được fallback.\n- Bỏ mọi phân tích nội bộ nếu có.\n- Không thêm facts mới.\n- Nếu INPUT đã rõ, giữ gần như nguyên văn.\n- Chỉ fallback khi INPUT rỗng, None, null hoặc chỉ là lỗi hệ thống.\n\nFallback đúng:\nChưa đủ nội dung trong file được cung cấp để tóm tắt chính xác.",
+        "",
+        0.1,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 38,
+      "type": "substring",
+      "pos": [
+        900,
+        -160
+      ],
+      "size": [
+        360,
+        156
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "input_string",
+          "name": "input_string",
+          "type": "STRING",
+          "widget": {
+            "name": "input_string"
+          },
+          "link": 4
+        },
+        {
+          "localized_name": "start_string",
+          "name": "start_string",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "start_string"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "end_string",
+          "name": "end_string",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "end_string"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "substring",
+          "name": "substring",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            5,
+            6,
+            7,
+            76
+          ]
+        },
+        {
+          "localized_name": "remaining_string",
+          "name": "remaining_string",
+          "type": "STRING",
+          "slot_index": 1,
+          "links": null
+        }
+      ],
+      "title": "Extract File Route Label",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "substring"
+      },
+      "widgets_values": [
+        "",
+        "FINAL_LABEL=",
+        ""
+      ]
+    },
+    {
+      "id": 5,
+      "type": "LLM",
+      "pos": [
+        1588.7470793718858,
+        -369.30571463793945
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 8
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 9
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 10
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 11
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            23,
+            41
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Tóm tắt tài liệu",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "3978924240ffe96042d9ff33ee901a638b2e4585",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nChỉ trả câu trả lời cuối bằng tiếng Việt. Không phân tích. Không nhắc lại quy tắc.\n\nBạn nhận câu hỏi người dùng và context file trong file_content.\nNếu file_content có [FILE_SOURCE_n], đó là dữ liệu file hợp lệ.\n\nNhiệm vụ: tóm tắt nội dung có trong file.\n\nQuy tắc:\n- Chỉ dùng facts trong [FILE_SOURCE_n].\n- Không dùng kiến thức nền, không suy đoán ngoài file.\n- Mỗi ý chính giữ dẫn chứng [FILE_SOURCE_n].\n- Nếu chỉ thấy một phần tài liệu, nói đó là phần thông tin hiện có.\n- Chỉ trả fallback khi file_content rỗng hoặc không có [FILE_SOURCE_n].\n\nFallback đúng:\nChưa đủ nội dung trong file được cung cấp để tóm tắt chính xác.",
+        "",
+        0.2,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 14,
+      "type": "PreviewAny",
+      "pos": [
+        1022.463755091238,
+        -491.82060486069736
+      ],
+      "size": [
+        520.635,
+        220
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 76
+        }
+      ],
+      "outputs": [],
+      "title": "Router Output",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 16,
+      "type": "PreviewAny",
+      "pos": [
+        2061.804923593627,
+        48.12394963702438
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 23
+        }
+      ],
+      "outputs": [],
+      "title": "Preview File Summary",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 7,
+      "type": "LLM",
+      "pos": [
+        1575.598680776196,
+        966.0347886016399
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 16
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 17
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 38
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 19
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            25,
+            63
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Đối chiếu tài liệu với dữ liệu gốc",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "3978924240ffe96042d9ff33ee901a638b2e4585",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nChỉ trả kết quả cuối bằng tiếng Việt. Không phân tích nội bộ, không nhắc lại quy tắc.\n\nfile_content gồm hai phần:\n- FILE UPLOAD: dữ liệu hồ sơ người dùng.\n- KB/ĐỐI CHIẾU: quy chuẩn, bảng giới hạn và nguồn đối chiếu.\n\nNhiệm vụ: đánh giá FILE UPLOAD Đạt hay Chưa đạt theo đúng dữ liệu KB trong context.\n\nQuy trình bắt buộc:\n1. Xác định đúng quy chuẩn, từng thông số, giá trị, đơn vị và điều kiện áp dụng trong FILE UPLOAD.\n2. Với từng thông số, tìm đúng dòng và đúng cột/mức/điều kiện trong KB. Không dùng giới hạn của thông số này cho thông số khác.\n3. Nếu KB có nhiều giới hạn cho cùng thông số hoặc có ghi chú/ngày hiệu lực, phải đọc ghi chú và ngày áp dụng để chọn đúng giới hạn theo ngày trong FILE UPLOAD; không lấy giá trị cũ chỉ vì đứng trước trong bảng.\n4. Khi một dòng bảng có nhiều giá trị theo cột, mức hoặc thời điểm hiệu lực, phải chọn đúng ô theo điều kiện trong FILE UPLOAD và dòng ghi chú liên quan trước khi so sánh.\n5. Nếu một giá trị có ký hiệu ghi chú như (*) và ghi chú nói áp dụng từ một ngày/thời điểm, thì với dữ liệu file có ngày bằng hoặc sau thời điểm đó phải dùng giá trị có ghi chú; không dùng giá trị không ghi chú đứng trước nó cho cùng thông số/điều kiện.\n6. Nếu số lượng giá trị trong dòng nhiều hơn số cột vì xuất hiện giá trị kèm ghi chú, coi giá trị có ghi chú là phiên bản thay thế theo hiệu lực cho điều kiện/cột liên quan ngay trước nó, không coi đó là cột mới độc lập.\n7. So sánh riêng từng thông số, nêu phép so sánh, sau đó mới kết luận tổng thể.\n8. Nếu tất cả thông số có căn cứ đều đạt thì kết luận Đạt. Nếu có ít nhất một thông số không đạt thì kết luận Chưa đạt.\n9. Chỉ kết luận Chưa đủ căn cứ khi sau khi đọc toàn bộ KB vẫn không có đúng giới hạn hoặc thiếu điều kiện bắt buộc.\n\nQuy tắc so sánh:\n- Giới hạn tối đa: giá trị file <= giới hạn là Đạt; lớn hơn là Chưa đạt.\n- Giới hạn tối thiểu: giá trị file >= giới hạn là Đạt; nhỏ hơn là Chưa đạt.\n- Khoảng giá trị: nằm trong cả hai biên là Đạt; ngoài khoảng là Chưa đạt.\n- Nhiều thông số: tất cả đạt thì kết luận tổng thể Đạt; có ít nhất một thông số Chưa đạt thì kết luận tổng thể Chưa đạt.\n- Hiểu số theo ngữ cảnh Việt Nam: dấu phẩy có thể là thập phân, dấu chấm có thể là phân cách hàng nghìn. Giữ cách viết gốc khi trình bày nhưng phải so sánh đúng giá trị.\n\nQuy tắc đọc bảng và context KB khó đọc:\n- Nếu KB context có bảng bị dàn dòng do PDF, vẫn phải đọc theo tiêu đề cột/hàng, dòng thông số, cột, mức, loại hình, thời gian, khu vực và điều kiện áp dụng.\n- Không lấy số đầu tiên trong bảng nếu số đó không nằm ở đúng dòng/cột/mức của thông số cần so sánh.\n- Nếu FILE UPLOAD có cột, mức, khu vực, khung giờ, hệ số, ngày đo hoặc điều kiện áp dụng, phải dùng đúng điều kiện đó khi chọn giới hạn; nếu một giới hạn có ký hiệu ghi chú, phải đọc dòng ghi chú tương ứng trước khi kết luận.\n- Nếu context có đúng bảng/dòng/cột giới hạn, bắt buộc kết luận Đạt hoặc Chưa đạt; không được kết luận Chưa đủ căn cứ.\n\nĐịnh dạng output bắt buộc, đúng thứ tự và không thêm mục khác:\n**Kết luận**\n- Đạt/Chưa đạt/Chưa đủ căn cứ. Nêu lý do ngắn gọn.\n\n**Dữ liệu trong file**\n- Mỗi thông số một dòng: thông số, điều kiện đo: giá trị đơn vị.\n\n**Căn cứ đối chiếu**\n- Mỗi thông số một dòng: quy chuẩn, điều kiện và giới hạn đã dùng. [SOURCE_n]\n\n**Nhận xét**\n- Mỗi thông số một dòng: phép so sánh số học, do đó Đạt hoặc Chưa đạt.\n\nQuy tắc định dạng:\n- Mỗi ý bắt đầu bằng \"- \" và nằm trên dòng riêng.\n- Không bắt buộc dùng bảng; ưu tiên bullet theo form trên.\n- Không gộp tiêu đề với nội dung, không lặp kết luận hoặc căn cứ.\n- Không đưa [FILE_SOURCE_n] vào nguồn tham khảo KB; nguồn KB dùng [SOURCE_n].\n\nQuy tắc hiển thị an toàn:\n- Chỉ dùng Unicode UTF-8 và Markdown đơn giản; không dùng HTML, code block, LaTeX, MathJax hoặc ký tự escape.\n- Giữ ký hiệu thông số và đơn vị ở plain text đúng như input sau khi làm sạch; không chuyển sang công thức toán học.\n- Nếu input có subscript/superscript/công thức khó hiển thị, chuyển về plain text tương đương trước khi trả lời.\n- Marker nguồn phải đúng dạng [SOURCE_n] hoặc [FILE_SOURCE_n]; chuẩn hóa marker thiếu dấu gạch dưới nếu gặp.",
+        "",
+        0,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 26,
+      "type": "LLM",
+      "pos": [
+        3142.5241143908697,
+        -420.86663235589583
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 44
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 45
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 46
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 47
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            48,
+            49
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Hoàn thiện tóm tắt",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nBạn là node FORMAT CUỐI cho FILE_SUMMARY.\n\nInput chính là nội dung từ Summary Condenser, được nối vào node này qua trường file_content. user_prompt_input chỉ là câu hỏi gốc.\n\nQuy tắc bắt buộc:\n- Nếu trong bất kỳ input nào có nội dung trả lời hoặc [FILE_SOURCE_n], phải format và trả lại nội dung đó.\n- Cấm nói thiếu file_content khi đã có nội dung trả lời.\n- Cấm tự tạo fallback thiếu căn cứ.\n- Cấm thêm facts mới.\n- Xóa <thought>...</thought>, dòng None/null/lỗi.\n- Dùng bullet \"-\"; mỗi ý một dòng.\n- Không dùng bảng hoặc code block.\n- Nếu thật sự không có nội dung trả lời, chỉ trả: None",
+        "",
+        0,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 20,
+      "type": "PreviewAny",
+      "pos": [
+        3668.6523382977293,
+        -499.063379829773
+      ],
+      "size": [
+        260,
+        180
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 48
+        }
+      ],
+      "outputs": [],
+      "title": "Preview Summary Final Output",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 28,
+      "type": "LLM",
+      "pos": [
+        3152.474080425233,
+        292.6702910374146
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 55
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 56
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 57
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 58
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            59,
+            60
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Hoàn thiện câu trả lời tài liệu",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nBạn là node FORMAT CUỐI cho FILE_QA.\n\nInput chính là nội dung từ QA Condenser, được nối vào node này qua trường file_content. user_prompt_input chỉ là câu hỏi gốc.\n\nQuy tắc bắt buộc:\n- Nếu trong bất kỳ input nào có nội dung trả lời hoặc [FILE_SOURCE_n], phải format và trả lại nội dung đó.\n- Cấm nói thiếu file_content khi đã có nội dung trả lời.\n- Cấm tự tạo fallback thiếu căn cứ.\n- Cấm thêm facts mới.\n- Xóa <thought>...</thought>, dòng None/null/lỗi.\n- Dùng bullet \"-\" khi có nhiều ý; mỗi ý một dòng.\n- Không dùng bảng hoặc code block.\n- Nếu câu hỏi chỉ định danh tài liệu, giữ câu trả lời ngắn theo loại/chủ đề tài liệu; không thêm mục đích, yêu cầu đối chiếu, lưu ý, bảng số liệu hoặc trạng thái đạt/không đạt nếu người dùng chưa hỏi đánh giá.\n- Nếu thật sự không có nội dung trả lời, chỉ trả: None\n\nQuy tắc hiển thị an toàn cho UI:\n- Chỉ trả văn bản Unicode UTF-8 thuần, có thể hiển thị trực tiếp trên giao diện web.\n- Không dùng LaTeX, MathJax, công thức Markdown hoặc ký hiệu dạng $...$, \\(...\\), \\[...\\].\n- Không dùng \\text{}, \\mathrm{}, \\mu, _{}, ^{}, dấu \\ escape hoặc HTML entity.\n- Không dùng code block.\n- Không tự chuyển chỉ tiêu, đơn vị sang công thức toán học.\n- Viết chỉ tiêu bằng plain text: SO2, NO2, CO, O3, PM2,5, PM10, TSP, BOD5, COD, pH, DO, TSS.\n- Viết đơn vị bằng plain text: µg/Nm3, mg/Nm3, mg/L, dBA, %, °C.\n- Nếu input có ký hiệu khó hiển thị, phải chuyển sang dạng plain text trước khi trả lời:\n  $\\text{SO}_2$ -> SO2\n  SO_{2} -> SO2\n  $\\text{PM}_{2,5}$ -> PM2,5\n  \\mu\\text{g/Nm}^3 -> µg/Nm3\n  µg/Nm^3 -> µg/Nm3\n  mg/Nm^3 -> mg/Nm3\n- Output cuối không được chứa các chuỗi: $, \\text, \\mathrm, \\mu, _{, }^, ^{.",
+        "",
+        0,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 15,
+      "type": "PreviewAny",
+      "pos": [
+        4883.561431485839,
+        341.62541755108646
+      ],
+      "size": [
+        520.635,
+        300
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 86
+        }
+      ],
+      "outputs": [],
+      "title": "Final Output",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 39,
+      "type": "LLM",
+      "pos": [
+        4345.174639999998,
+        356.8732403404542
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 84
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 85
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            86
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Làm sạch đầu ra cuối",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nBạn là SANITIZER CUỐI trước UI. Chỉ sửa định dạng và ký tự của input; không đánh giá lại, không thêm facts và không đổi kết luận.\n\nOutput cuối bắt buộc có đúng bốn mục theo thứ tự:\n**Kết luận**\n- ...\n\n**Dữ liệu trong file**\n- ...\n\n**Căn cứ đối chiếu**\n- ...\n\n**Nhận xét**\n- ...\n\nQuy tắc sửa định dạng:\n- Tách tiêu đề và nội dung thành các dòng riêng.\n- Mỗi nội dung phải bắt đầu bằng \"- \".\n- Không thêm mục khác, không dùng bảng, không gộp nhiều bullet thành một đoạn.\n- Xóa nội dung lặp, <thought>, None/null, metadata và lỗi runtime/API.\n- Giữ nguyên số liệu, giới hạn, đơn vị, điều kiện, phép so sánh, kết luận và nguồn dẫn.\n- Nếu input thiếu một mục, tạo mục đó và ghi \"- Chưa đủ căn cứ.\"; không tự bổ sung facts.\n\nQuy tắc bảo toàn trước khi trả UI:\n- Nếu input đã có kết luận Đạt hoặc Chưa đạt và có dữ liệu/giới hạn/phép so sánh, chỉ sửa format; không làm mất bullet và không đổi kết luận.\n- Không tự tạo output Không có dữ liệu/Không có kết quả/Chưa đủ căn cứ từ lỗi runtime/API. Nếu input chỉ là lỗi runtime/API, giữ lỗi ngắn gọn để backend recovery dùng output hợp lệ từ node trước.\n- Không để mục Dữ liệu trong file, Căn cứ đối chiếu hoặc Nhận xét rỗng khi input có nội dung tương ứng.\n\nQuy tắc hiển thị an toàn:\n- Chỉ dùng Unicode UTF-8 và Markdown đơn giản; không dùng HTML, code block, LaTeX, MathJax hoặc ký tự escape.\n- Giữ ký hiệu thông số và đơn vị ở plain text đúng như input sau khi làm sạch; không chuyển sang công thức toán học.\n- Nếu input có subscript/superscript/công thức khó hiển thị, chuyển về plain text tương đương trước khi trả lời.\n- Marker nguồn phải đúng dạng [SOURCE_n] hoặc [FILE_SOURCE_n]; chuẩn hóa marker thiếu dấu gạch dưới nếu gặp.",
+        "",
+        0,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 11,
+      "type": "BN_JoinTextPlus",
+      "pos": [
+        3966.303859717835,
+        362.606817783325
+      ],
+      "size": [
+        244.848,
+        238
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "text1",
+          "name": "text1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 49
+        },
+        {
+          "localized_name": "text2",
+          "name": "text2",
+          "shape": 7,
+          "type": "STRING",
+          "link": 60
+        },
+        {
+          "localized_name": "text3",
+          "name": "text3",
+          "shape": 7,
+          "type": "STRING",
+          "link": 75
+        },
+        {
+          "localized_name": "text4",
+          "name": "text4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text5",
+          "name": "text5",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text6",
+          "name": "text6",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text7",
+          "name": "text7",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text8",
+          "name": "text8",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text9",
+          "name": "text9",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text10",
+          "name": "text10",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "separator",
+          "name": "separator",
+          "type": "STRING",
+          "widget": {
+            "name": "separator"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "joined_text",
+          "name": "joined_text",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            85
+          ]
+        }
+      ],
+      "title": "Join File Final Outputs",
+      "properties": {
+        "Node name for S&R": "BN_JoinTextPlus",
+        "cnr_id": "comfyui_business_nodes"
+      },
+      "widgets_values": [
+        "\n\n"
+      ]
+    },
+    {
+      "id": 30,
+      "type": "PreviewAny",
+      "pos": [
+        3702.7388811029045,
+        78.93867768177792
+      ],
+      "size": [
+        221.284765625,
+        166
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 59
+        }
+      ],
+      "outputs": [],
+      "title": "Preview QA Final Output",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 33,
+      "type": "PreviewAny",
+      "pos": [
+        3695.4054647812495,
+        1016.6917364177848
+      ],
+      "size": [
+        224.44296875,
+        166
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 74
+        }
+      ],
+      "outputs": [],
+      "title": "Preview VS_KB Final Output",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 13,
+      "type": "LLM",
+      "pos": [
+        3171.313622212951,
+        1032.210317957275
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 70
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 71
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 72
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 73
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            68,
+            74,
+            75
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Hoàn thiện kết quả đối chiếu",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nBạn là node KIỂM TRA VÀ HOÀN THIỆN kết quả FILE_VS_KB.\n\nQUY TẮC ƯU TIÊN TUYỆT ĐỐI:\n- Nếu input được đóng gói bằng khối === FILE_CONTENT === trong user message, nội dung sau marker đó chính là file_content hợp lệ; không được nói là thiếu file_content khi khối này tồn tại.\n- Nguồn duy nhất cần kiểm tra là file_content, đây là kết quả từ node rút gọn.\n- Bỏ qua hoàn toàn user_prompt_input/câu hỏi/query retrieval. Không được thay file_content bằng nội dung câu hỏi.\n- Nếu file_content đã có giá trị file, giới hạn, phép so sánh và kết luận, phải bảo toàn chúng.\n- Chỉ sửa lỗi số học hiển nhiên dựa trên chính số liệu có trong file_content; không thêm dữ kiện ngoài input.\n- Không dùng giới hạn của thông số đầu tiên cho thông số khác.\n- Không đổi Đạt/Chưa đạt thành Chưa đủ căn cứ hoặc Không có thông tin khi file_content đã có kết quả.\n\nQuy tắc chống làm rỗng output:\n- Nếu file_content là kết quả hợp lệ có bốn mục, phải bảo toàn các bullet đang có; không thay bằng Không có dữ liệu, Không có kết quả, Chưa đủ căn cứ hoặc lỗi hệ thống.\n- Nếu file_content chứa Đạt hoặc Chưa đạt kèm số liệu/giới hạn/phép so sánh, phải giữ kết luận đó và giữ đủ Dữ liệu trong file, Căn cứ đối chiếu, Nhận xét.\n- Không tạo mục rỗng. Nếu không thể xử lý do input là lỗi runtime/API thuần, trả lại nội dung lỗi ngắn gọn để backend recovery chọn output hợp lệ trước đó; không biến lỗi thành câu trả lời đánh giá.\n\nBắt buộc trả đúng bốn mục và đúng thứ tự:\n**Kết luận**\n- Một kết luận tổng thể và lý do ngắn gọn.\n\n**Dữ liệu trong file**\n- Mỗi thông số một bullet riêng.\n\n**Căn cứ đối chiếu**\n- Mỗi thông số một bullet riêng, giữ đúng giới hạn, điều kiện và [SOURCE_n].\n\n**Nhận xét**\n- Mỗi thông số một bullet riêng, giữ hoặc sửa phép so sánh số học.\n\nKhông thêm mục khác, không dùng bảng, không gộp tiêu đề và nội dung trên cùng dòng.\n\nQuy tắc hiển thị an toàn:\n- Chỉ dùng Unicode UTF-8 và Markdown đơn giản; không dùng HTML, code block, LaTeX, MathJax hoặc ký tự escape.\n- Giữ ký hiệu thông số và đơn vị ở plain text đúng như input sau khi làm sạch; không chuyển sang công thức toán học.\n- Nếu input có subscript/superscript/công thức khó hiển thị, chuyển về plain text tương đương trước khi trả lời.\n- Marker nguồn phải đúng dạng [SOURCE_n] hoặc [FILE_SOURCE_n]; chuẩn hóa marker thiếu dấu gạch dưới nếu gặp.",
+        "",
+        0,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 31,
+      "type": "LLM",
+      "pos": [
+        2328.0525794893183,
+        955.4312199999999
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 61
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 62
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 63
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 64
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            72,
+            65
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Rút gọn kết quả đối chiếu",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nBạn là node RÚT GỌN kết quả FILE_VS_KB.\n\nQUY TẮC ƯU TIÊN TUYỆT ĐỐI:\n- Nếu input được đóng gói bằng khối === FILE_CONTENT === trong user message, nội dung sau marker đó chính là file_content hợp lệ; không được nói là thiếu file_content khi khối này tồn tại.\n- Nguồn duy nhất cần xử lý là nội dung trong file_content, đây là kết quả đã được node đối chiếu tạo ra.\n- Bỏ qua hoàn toàn user_prompt_input/câu hỏi/query retrieval. Không được dùng câu hỏi làm nội dung trả lời.\n- Nếu file_content đã có bốn mục và kết luận, sao chép bảo toàn nội dung đó; chỉ xóa <thought>, dòng lặp hoặc lỗi hiển thị.\n- Không đánh giá lại, không đổi số liệu, giới hạn, nguồn, phép so sánh hoặc kết luận.\n\nBắt buộc giữ đúng bốn mục và đúng thứ tự:\n**Kết luận**\n**Dữ liệu trong file**\n**Căn cứ đối chiếu**\n**Nhận xét**\n\nQuy tắc định dạng:\n- Mỗi ý là một bullet bắt đầu bằng \"- \" trên dòng riêng.\n- Không thêm mục khác, không dùng bảng, không gộp các mục thành đoạn văn.\n- Không đổi Đạt/Chưa đạt thành Chưa đủ căn cứ hoặc Không có thông tin.\n\nQuy tắc chống làm rỗng output:\n- Nếu file_content là kết quả hợp lệ có bốn mục, phải bảo toàn các bullet đang có; không thay bằng Không có dữ liệu, Không có kết quả, Chưa đủ căn cứ hoặc lỗi hệ thống.\n- Nếu file_content chứa Đạt hoặc Chưa đạt kèm số liệu/giới hạn/phép so sánh, phải giữ kết luận đó và giữ đủ Dữ liệu trong file, Căn cứ đối chiếu, Nhận xét.\n- Không tạo mục rỗng. Nếu không thể xử lý do input là lỗi runtime/API thuần, trả lại nội dung lỗi ngắn gọn để backend recovery chọn output hợp lệ trước đó; không biến lỗi thành câu trả lời đánh giá.\n- Không tạo nội dung thiếu căn cứ nếu file_content đã có kết quả hợp lệ.\n\nQuy tắc hiển thị an toàn:\n- Chỉ dùng Unicode UTF-8 và Markdown đơn giản; không dùng HTML, code block, LaTeX, MathJax hoặc ký tự escape.\n- Giữ ký hiệu thông số và đơn vị ở plain text đúng như input sau khi làm sạch; không chuyển sang công thức toán học.\n- Nếu input có subscript/superscript/công thức khó hiển thị, chuyển về plain text tương đương trước khi trả lời.\n- Marker nguồn phải đúng dạng [SOURCE_n] hoặc [FILE_SOURCE_n]; chuẩn hóa marker thiếu dấu gạch dưới nếu gặp.",
+        "",
+        0.1,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 32,
+      "type": "PreviewAny",
+      "pos": [
+        2792.6078614238277,
+        819.21122612384
+      ],
+      "size": [
+        269.28671875,
+        166
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 65
+        }
+      ],
+      "outputs": [],
+      "title": "Preview VS_KB Condensed Output",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 29,
+      "type": "PreviewAny",
+      "pos": [
+        2782.1731142048347,
+        121.86332371771238
+      ],
+      "size": [
+        245.1080078125,
+        166
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 54
+        }
+      ],
+      "outputs": [],
+      "title": "Preview QA Condensed Output",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 19,
+      "type": "PreviewAny",
+      "pos": [
+        2813.557979659546,
+        -515.1684577127837
+      ],
+      "size": [
+        288.2291015625,
+        166
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 43
+        }
+      ],
+      "outputs": [],
+      "title": "Preview Summary Condensed Output",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 17,
+      "type": "PreviewAny",
+      "pos": [
+        2058.9557989199225,
+        830.2908820246581
+      ],
+      "size": [
+        227.29669658374155,
+        146.5411482996376
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 24
+        }
+      ],
+      "outputs": [],
+      "title": "Preview File QA",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 6,
+      "type": "LLM",
+      "pos": [
+        1587.7113763121943,
+        296.2999163952332
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 12
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 13
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 14
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 15
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            24,
+            52
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Hỏi đáp theo tài liệu",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "3978924240ffe96042d9ff33ee901a638b2e4585",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nChỉ trả câu trả lời cuối bằng tiếng Việt. Không phân tích. Không nhắc lại quy tắc.\n\nBạn nhận câu hỏi người dùng và context file trong file_content.\nNếu file_content có [FILE_SOURCE_n], đó là dữ liệu file hợp lệ.\n\nNhiệm vụ: trả lời trực tiếp đúng phạm vi câu hỏi dựa trên file.\n\nQuy tắc:\n- Chỉ dùng facts trong [FILE_SOURCE_n].\n- Không dùng kiến thức nền, không suy luận ngoài file.\n- Mỗi ý trả lời giữ dẫn chứng [FILE_SOURCE_n].\n- Nếu câu hỏi chỉ định danh tài liệu như \"đây là tài liệu gì?\" hoặc \"file này là gì?\", trả ngắn về loại/chủ đề tài liệu; không mở rộng sang mục đích kiểm thử, yêu cầu đối chiếu, lưu ý, bảng số liệu hoặc kết luận đạt/không đạt. Nếu tiêu đề/tên file chứa trạng thái đánh giá như đạt/không đạt/phù hợp/không phù hợp, không nhắc trạng thái đó trừ khi người dùng hỏi tên chính xác hoặc yêu cầu đánh giá.\n- Không kết luận đạt/không đạt/phù hợp/không phù hợp nếu người dùng chưa yêu cầu so sánh hoặc đánh giá.\n- Nếu chỉ có căn cứ một phần, trả phần chắc chắn và nói phần chưa thấy.\n- Chỉ trả fallback khi không có dữ kiện phù hợp trong [FILE_SOURCE_n].\n\nQuy tắc hiển thị an toàn cho UI:\n- Chỉ trả văn bản Unicode UTF-8 thuần, có thể hiển thị trực tiếp trên giao diện web.\n- Không dùng LaTeX, MathJax, công thức Markdown hoặc ký hiệu dạng $...$, \\(...\\), \\[...\\].\n- Không dùng \\text{}, \\mathrm{}, \\mu, _{}, ^{}, dấu \\ escape hoặc HTML entity.\n- Không dùng code block.\n- Không tự chuyển chỉ tiêu, đơn vị sang công thức toán học.\n- Viết chỉ tiêu bằng plain text: SO2, NO2, CO, O3, PM2,5, PM10, TSP, BOD5, COD, pH, DO, TSS.\n- Viết đơn vị bằng plain text: µg/Nm3, mg/Nm3, mg/L, dBA, %, °C.\n- Nếu input có ký hiệu khó hiển thị, phải chuyển sang dạng plain text trước khi trả lời:\n  $\\text{SO}_2$ -> SO2\n  SO_{2} -> SO2\n  $\\text{PM}_{2,5}$ -> PM2,5\n  \\mu\\text{g/Nm}^3 -> µg/Nm3\n  µg/Nm^3 -> µg/Nm3\n  mg/Nm^3 -> mg/Nm3\n- Output cuối không được chứa các chuỗi: $, \\text, \\mathrm, \\mu, _{, }^, ^{.\n\nFallback đúng:\nChưa tìm thấy căn cứ phù hợp trong file được cung cấp để trả lời câu hỏi này.",
+        "",
+        0.2,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        4096,
+        "",
+        30,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 18,
+      "type": "PreviewAny",
+      "pos": [
+        2037.823758383312,
+        1447.1882687226816
+      ],
+      "size": [
+        210,
+        166
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 25
+        }
+      ],
+      "outputs": [],
+      "title": "Preview File vs KB",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 24,
+      "type": "BN_JoinTextPlus",
+      "pos": [
+        960.8223582977299,
+        291.7729467021182
+      ],
+      "size": [
+        280.1216796875,
+        238
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "text1",
+          "name": "text1",
+          "shape": 7,
+          "type": "STRING",
+          "link": 35
+        },
+        {
+          "localized_name": "text2",
+          "name": "text2",
+          "shape": 7,
+          "type": "STRING",
+          "link": 36
+        },
+        {
+          "localized_name": "text3",
+          "name": "text3",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text4",
+          "name": "text4",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text5",
+          "name": "text5",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text6",
+          "name": "text6",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text7",
+          "name": "text7",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text8",
+          "name": "text8",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text9",
+          "name": "text9",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "text10",
+          "name": "text10",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "separator",
+          "name": "separator",
+          "type": "STRING",
+          "widget": {
+            "name": "separator"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "joined_text",
+          "name": "joined_text",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            37,
+            38
+          ]
+        }
+      ],
+      "title": "Combine File + KB Context",
+      "properties": {
+        "Node name for S&R": "BN_JoinTextPlus",
+        "cnr_id": "comfyui_business_nodes"
+      },
+      "widgets_values": [
+        "\n\n=== DỮ LIỆU GỐC / ĐỐI CHIẾU TỪ KB ===\n\n"
+      ]
+    },
+    {
+      "id": 25,
+      "type": "PreviewAny",
+      "pos": [
+        1270.3551391060794,
+        591.0068987659296
+      ],
+      "size": [
+        282.6509765625,
+        166
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 37
+        }
+      ],
+      "outputs": [],
+      "title": "Preview Combined File + KB Context",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 21,
+      "type": "load_ebd",
+      "pos": [
+        171.66831595883414,
+        923.9815298613529
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_path",
+          "name": "model_path",
+          "type": "STRING",
+          "widget": {
+            "name": "model_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 83
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "ebd_model",
+          "name": "ebd_model",
+          "type": "EBD_MODEL",
+          "links": [
+            32
+          ]
+        }
+      ],
+      "title": "Load Embeddings",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "4d279969d7b08a24857f7455b362b745d6dcf2d0",
+        "Node name for S&R": "load_ebd"
+      },
+      "widgets_values": [
+        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        true,
+        "auto"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "embeddings_function",
+      "pos": [
+        623.4988475218099,
+        940.3268396206114
+      ],
+      "size": [
+        270,
+        246
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "ebd_model",
+          "name": "ebd_model",
+          "shape": 7,
+          "type": "EBD_MODEL",
+          "link": 32
+        },
+        {
+          "localized_name": "model_path",
+          "name": "model_path",
+          "type": "STRING",
+          "widget": {
+            "name": "model_path"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "question",
+          "name": "question",
+          "type": "STRING",
+          "widget": {
+            "name": "question"
+          },
+          "link": 33
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": 82
+        },
+        {
+          "localized_name": "device",
+          "name": "device",
+          "type": "COMBO",
+          "widget": {
+            "name": "device"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "k",
+          "name": "k",
+          "type": "INT",
+          "widget": {
+            "name": "k"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "chunk_size",
+          "name": "chunk_size",
+          "type": "INT",
+          "widget": {
+            "name": "chunk_size"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "chunk_overlap",
+          "name": "chunk_overlap",
+          "type": "INT",
+          "widget": {
+            "name": "chunk_overlap"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "base_path",
+          "name": "base_path",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "base_path"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "ebd_response",
+          "name": "ebd_response",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            34,
+            36
+          ]
+        }
+      ],
+      "title": "Retrieve From Saved KB",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "3978924240ffe96042d9ff33ee901a638b2e4585",
+        "Node name for S&R": "embeddings_function"
+      },
+      "widgets_values": [
+        "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+        "",
+        true,
+        "auto",
+        8,
+        1200,
+        150,
+        "D://DATN//Chatbot_DATN//ComfyUI_windows_portable//ComfyUI//Environment_KNOWLEDGE_BASE_NHA_NUOC"
+      ]
+    },
+    {
+      "id": 23,
+      "type": "PreviewAny",
+      "pos": [
+        911.744162446706,
+        1309.5741925289296
+      ],
+      "size": [
+        520.635,
+        260
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "source",
+          "name": "source",
+          "type": "*",
+          "link": 34
+        }
+      ],
+      "outputs": [],
+      "title": "Retrieved Source Context",
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.14.1",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": 3,
+      "type": "LLM_api_loader",
+      "pos": [
+        139.82971011779807,
+        -429.046071502151
+      ],
+      "size": [
+        210,
+        154
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model_name",
+          "name": "model_name",
+          "type": "STRING",
+          "widget": {
+            "name": "model_name"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "base_url",
+          "name": "base_url",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "base_url"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "api_key",
+          "name": "api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_ollama",
+          "name": "is_ollama",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_ollama"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "slot_index": 0,
+          "links": [
+            3,
+            8,
+            12,
+            16,
+            39,
+            44,
+            50,
+            55,
+            61,
+            70,
+            84
+          ]
+        }
+      ],
+      "title": "LLM API Loader",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "3978924240ffe96042d9ff33ee901a638b2e4585",
+        "Node name for S&R": "LLM_api_loader"
+      },
+      "widgets_values": [
+        "gemma-4-31b-it",
+        "https://generativelanguage.googleapis.com/v1beta/openai/",
+        "${COMFYUI_LLM_API_KEY}",
+        false,
+        "Get Models"
+      ]
+    },
+    {
+      "id": 4,
+      "type": "LLM",
+      "pos": [
+        370.8016005579223,
+        53.79285508399974
+      ],
+      "size": [
+        400,
+        566
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "model",
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 3
+        },
+        {
+          "localized_name": "system_prompt_input",
+          "name": "system_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt_input",
+          "name": "user_prompt_input",
+          "shape": 7,
+          "type": "STRING",
+          "link": 1
+        },
+        {
+          "localized_name": "tools",
+          "name": "tools",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "file_content",
+          "name": "file_content",
+          "shape": 7,
+          "type": "STRING",
+          "link": 2
+        },
+        {
+          "localized_name": "images",
+          "name": "images",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "localized_name": "extra_parameters",
+          "name": "extra_parameters",
+          "shape": 7,
+          "type": "DICT",
+          "link": null
+        },
+        {
+          "localized_name": "user_history",
+          "name": "user_history",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "img_URL",
+          "name": "img_URL",
+          "shape": 7,
+          "type": "STRING",
+          "link": null
+        },
+        {
+          "localized_name": "system_prompt",
+          "name": "system_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "system_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "user_prompt",
+          "name": "user_prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "user_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "temperature",
+          "name": "temperature",
+          "type": "FLOAT",
+          "widget": {
+            "name": "temperature"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_memory",
+          "name": "is_memory",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_memory"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_tools_in_sys_prompt",
+          "name": "is_tools_in_sys_prompt",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_tools_in_sys_prompt"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_locked",
+          "name": "is_locked",
+          "type": "COMBO",
+          "widget": {
+            "name": "is_locked"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "main_brain",
+          "name": "main_brain",
+          "type": "COMBO",
+          "widget": {
+            "name": "main_brain"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "max_length",
+          "name": "max_length",
+          "type": "INT",
+          "widget": {
+            "name": "max_length"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "imgbb_api_key",
+          "name": "imgbb_api_key",
+          "shape": 7,
+          "type": "STRING",
+          "widget": {
+            "name": "imgbb_api_key"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "conversation_rounds",
+          "name": "conversation_rounds",
+          "shape": 7,
+          "type": "INT",
+          "widget": {
+            "name": "conversation_rounds"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "historical_record",
+          "name": "historical_record",
+          "shape": 7,
+          "type": "COMBO",
+          "widget": {
+            "name": "historical_record"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "is_enable",
+          "name": "is_enable",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "is_enable"
+          },
+          "link": null
+        },
+        {
+          "localized_name": "stream",
+          "name": "stream",
+          "shape": 7,
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "assistant_response",
+          "name": "assistant_response",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            4
+          ]
+        },
+        {
+          "localized_name": "history",
+          "name": "history",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "tool",
+          "name": "tool",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "localized_name": "image",
+          "name": "image",
+          "type": "IMAGE",
+          "links": null
+        },
+        {
+          "localized_name": "reasoning_content",
+          "name": "reasoning_content",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Bộ định tuyến chế độ file",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "3978924240ffe96042d9ff33ee901a638b2e4585",
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "/no_think\nBạn là bộ phân loại câu hỏi cho workflow text_with_file.\n\nChỉ trả về đúng 1 nhãn duy nhất trong 3 nhãn sau:\nFILE_SUMMARY, FILE_QA, FILE_VS_KB\n\nPhân nhánh theo mục đích câu hỏi:\n- FILE_QA: câu hỏi cụ thể về chính file. Bao gồm câu định danh ngắn như \"đây là tài liệu gì?\", \"file này là gì?\", \"tài liệu này nói về gì?\", hoặc hỏi một phần/nội dung cụ thể trong file.\n- FILE_SUMMARY: chỉ khi người dùng yêu cầu tóm tắt, tổng quan, nội dung chính, các ý chính hoặc cấu trúc đầy đủ của tài liệu.\n- FILE_VS_KB: chỉ khi người dùng yêu cầu so sánh, đối chiếu, đánh giá đạt/không đạt, kiểm tra phù hợp với QCVN/quy định/dữ liệu gốc/KB.\n\nQuy tắc ưu tiên:\n- Câu hỏi định danh tài liệu là FILE_QA, không phải FILE_SUMMARY.\n- Nếu không chắc giữa FILE_QA và FILE_SUMMARY, chọn FILE_QA để tránh trả lời quá rộng.\n- Nếu có yêu cầu đối chiếu/đánh giá với dữ liệu gốc thì chọn FILE_VS_KB.\n- Không giải thích, không liệt kê nhiều nhãn.\n\nOutput bắt buộc:\nFINAL_LABEL=<NHAN>\nTrong đó <NHAN> chỉ được là FILE_SUMMARY, FILE_QA hoặc FILE_VS_KB.",
+        "",
+        0,
+        "disable",
+        "disable",
+        "disable",
+        "enable",
+        2048,
+        "",
+        20,
+        "",
+        true,
+        false
+      ]
+    },
+    {
+      "id": 2,
+      "type": "get_string",
+      "pos": [
+        -374.62265877807613,
+        460.3198694274898
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "input_string",
+          "name": "input_string",
+          "type": "STRING",
+          "widget": {
+            "name": "input_string"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "string",
+          "name": "string",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            2,
+            10,
+            14,
+            35
+          ]
+        }
+      ],
+      "title": "Input Context",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "3978924240ffe96042d9ff33ee901a638b2e4585",
+        "Node name for S&R": "get_string"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 1,
+      "type": "get_string",
+      "pos": [
+        -360.8584319140623,
+        -37.86987011596676
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "localized_name": "input_string",
+          "name": "input_string",
+          "type": "STRING",
+          "widget": {
+            "name": "input_string"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "localized_name": "string",
+          "name": "string",
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            1,
+            9,
+            13,
+            17,
+            33,
+            40,
+            45,
+            51,
+            56,
+            62,
+            71
+          ]
+        }
+      ],
+      "title": "Input Question",
+      "properties": {
+        "cnr_id": "comfyui_llm_party",
+        "ver": "3978924240ffe96042d9ff33ee901a638b2e4585",
+        "Node name for S&R": "get_string"
+      },
+      "widgets_values": [
+        ""
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      4,
+      2,
+      "STRING"
+    ],
+    [
+      2,
+      2,
+      0,
+      4,
+      4,
+      "STRING"
+    ],
+    [
+      3,
+      3,
+      0,
+      4,
+      0,
+      "CUSTOM"
+    ],
+    [
+      4,
+      4,
+      0,
+      38,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      38,
+      0,
+      8,
+      0,
+      "STRING"
+    ],
+    [
+      6,
+      38,
+      0,
+      9,
+      0,
+      "STRING"
+    ],
+    [
+      7,
+      38,
+      0,
+      10,
+      0,
+      "STRING"
+    ],
+    [
+      8,
+      3,
+      0,
+      5,
+      0,
+      "CUSTOM"
+    ],
+    [
+      9,
+      1,
+      0,
+      5,
+      2,
+      "STRING"
+    ],
+    [
+      10,
+      2,
+      0,
+      5,
+      4,
+      "STRING"
+    ],
+    [
+      11,
+      8,
+      0,
+      5,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      12,
+      3,
+      0,
+      6,
+      0,
+      "CUSTOM"
+    ],
+    [
+      13,
+      1,
+      0,
+      6,
+      2,
+      "STRING"
+    ],
+    [
+      14,
+      2,
+      0,
+      6,
+      4,
+      "STRING"
+    ],
+    [
+      15,
+      9,
+      0,
+      6,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      16,
+      3,
+      0,
+      7,
+      0,
+      "CUSTOM"
+    ],
+    [
+      17,
+      1,
+      0,
+      7,
+      2,
+      "STRING"
+    ],
+    [
+      19,
+      10,
+      0,
+      7,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      23,
+      5,
+      0,
+      16,
+      0,
+      "STRING"
+    ],
+    [
+      24,
+      6,
+      0,
+      17,
+      0,
+      "STRING"
+    ],
+    [
+      25,
+      7,
+      0,
+      18,
+      0,
+      "STRING"
+    ],
+    [
+      32,
+      21,
+      0,
+      22,
+      1,
+      "EBD_MODEL"
+    ],
+    [
+      33,
+      1,
+      0,
+      22,
+      3,
+      "STRING"
+    ],
+    [
+      34,
+      22,
+      0,
+      23,
+      0,
+      "STRING"
+    ],
+    [
+      35,
+      2,
+      0,
+      24,
+      0,
+      "STRING"
+    ],
+    [
+      36,
+      22,
+      0,
+      24,
+      1,
+      "STRING"
+    ],
+    [
+      37,
+      24,
+      0,
+      25,
+      0,
+      "STRING"
+    ],
+    [
+      38,
+      24,
+      0,
+      7,
+      4,
+      "STRING"
+    ],
+    [
+      39,
+      3,
+      0,
+      12,
+      0,
+      "CUSTOM"
+    ],
+    [
+      40,
+      1,
+      0,
+      12,
+      2,
+      "STRING"
+    ],
+    [
+      41,
+      5,
+      0,
+      12,
+      4,
+      "STRING"
+    ],
+    [
+      42,
+      8,
+      0,
+      12,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      43,
+      12,
+      0,
+      19,
+      0,
+      "STRING"
+    ],
+    [
+      44,
+      3,
+      0,
+      26,
+      0,
+      "CUSTOM"
+    ],
+    [
+      45,
+      1,
+      0,
+      26,
+      2,
+      "STRING"
+    ],
+    [
+      46,
+      12,
+      0,
+      26,
+      4,
+      "STRING"
+    ],
+    [
+      47,
+      8,
+      0,
+      26,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      48,
+      26,
+      0,
+      20,
+      0,
+      "STRING"
+    ],
+    [
+      49,
+      26,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      50,
+      3,
+      0,
+      27,
+      0,
+      "CUSTOM"
+    ],
+    [
+      51,
+      1,
+      0,
+      27,
+      2,
+      "STRING"
+    ],
+    [
+      52,
+      6,
+      0,
+      27,
+      4,
+      "STRING"
+    ],
+    [
+      53,
+      9,
+      0,
+      27,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      54,
+      27,
+      0,
+      29,
+      0,
+      "STRING"
+    ],
+    [
+      55,
+      3,
+      0,
+      28,
+      0,
+      "CUSTOM"
+    ],
+    [
+      56,
+      1,
+      0,
+      28,
+      2,
+      "STRING"
+    ],
+    [
+      57,
+      27,
+      0,
+      28,
+      4,
+      "STRING"
+    ],
+    [
+      58,
+      9,
+      0,
+      28,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      59,
+      28,
+      0,
+      30,
+      0,
+      "STRING"
+    ],
+    [
+      60,
+      28,
+      0,
+      11,
+      1,
+      "STRING"
+    ],
+    [
+      61,
+      3,
+      0,
+      31,
+      0,
+      "CUSTOM"
+    ],
+    [
+      62,
+      1,
+      0,
+      31,
+      2,
+      "STRING"
+    ],
+    [
+      63,
+      7,
+      0,
+      31,
+      4,
+      "STRING"
+    ],
+    [
+      64,
+      10,
+      0,
+      31,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      68,
+      13,
+      0,
+      11,
+      2,
+      "STRING"
+    ],
+    [
+      70,
+      3,
+      0,
+      13,
+      0,
+      "CUSTOM"
+    ],
+    [
+      71,
+      1,
+      0,
+      13,
+      2,
+      "STRING"
+    ],
+    [
+      72,
+      31,
+      0,
+      13,
+      4,
+      "STRING"
+    ],
+    [
+      73,
+      10,
+      0,
+      13,
+      20,
+      "BOOLEAN"
+    ],
+    [
+      74,
+      13,
+      0,
+      33,
+      0,
+      "STRING"
+    ],
+    [
+      75,
+      13,
+      0,
+      11,
+      2,
+      "STRING"
+    ],
+    [
+      76,
+      38,
+      0,
+      14,
+      0,
+      "STRING"
+    ],
+    [
+      82,
+      10,
+      0,
+      22,
+      4,
+      "BOOLEAN"
+    ],
+    [
+      83,
+      10,
+      0,
+      21,
+      1,
+      "BOOLEAN"
+    ],
+    [
+      65,
+      31,
+      0,
+      32,
+      0,
+      "STRING"
+    ],
+    [
+      84,
+      3,
+      0,
+      39,
+      0,
+      "CUSTOM"
+    ],
+    [
+      85,
+      11,
+      0,
+      39,
+      2,
+      "STRING"
+    ],
+    [
+      86,
+      39,
+      0,
+      15,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "workflowRendererVersion": "LG",
+    "ds": {
+      "scale": 0.683013455365072,
+      "offset": [
+        1117.577780869638,
+        222.35226282081695
+      ]
+    },
+    "info": {
+      "author": "Codex",
+      "name": "EnvironmentChatbot",
+      "software": "ComfyUI",
+      "description": "Source folder + retrieval + specialist LLM workflow for environmental monitoring",
+      "modified": "2026-05-06T10:56:48+07:00",
+      "created": "2026-03-24T00:00:00Z",
+      "version": "4"
+    }
+  },
+  "version": 0.4
+}
+

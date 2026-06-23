@@ -1,0 +1,400 @@
+/* ══════════════════════════════════════════════════════════
+ *  Split-Screen Auth — Organic/Editorial aesthetic
+ *  Font: DM Serif Display (headings) + Sora (body)
+ * ══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Sora:wght@300;400;500;600;700&display=swap');
+
+/* ── Layout ─────────────────────────────────────── */
+
+.splitContainer {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* ── Left panel: form side ──────────────────────── */
+
+.formPanel {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 40px;
+  background: #fcfcfa;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Botanical watermark overlay */
+.formPanel::before {
+  content: "";
+  position: absolute;
+  inset: -10%;
+  background-image: url("data:image/svg+xml,%3Csvg width='800' height='800' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10,90 Q50,90 90,10 Q80,50 10,90 M30,70 Q50,50 70,30 M50,80 Q70,70 80,50 M20,60 Q40,40 50,20' stroke='%232d6a4f' stroke-width='0.5' fill='none' opacity='0.08'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: 150%;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-15deg);
+}
+
+.formInner {
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* ── Logo ───────────────────────────────────────── */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 48px;
+  animation: fadeSlideUp 0.6s ease both;
+}
+
+.brandIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #2d6a4f, #40916c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(43, 122, 85, 0.2);
+}
+
+.brandName {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1b4332;
+  letter-spacing: -0.3px;
+}
+
+/* ── Heading ────────────────────────────────────── */
+
+.heading {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 34px;
+  font-weight: 600;
+  color: #1b4332;
+  line-height: 1.15;
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  animation: fadeSlideUp 0.6s ease 0.08s both;
+}
+
+.subheading {
+  font-family: 'Sora', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #6b7280;
+  margin-bottom: 36px;
+  line-height: 1.5;
+  animation: fadeSlideUp 0.6s ease 0.14s both;
+}
+
+/* ── Form ───────────────────────────────────────── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: fadeSlideUp 0.6s ease 0.2s both;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-family: 'Sora', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #9ca3af;
+  pointer-events: none;
+  transition: color 0.25s;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 14px 14px 42px;
+  background: #ffffff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  color: #1f2937;
+  font-size: 14px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.input::placeholder {
+  color: #c4c9d2;
+  font-weight: 300;
+}
+
+.input:focus {
+  border-color: #2d6a4f;
+  box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+}
+
+.input:focus ~ .inputIcon,
+.inputWrapper:focus-within .inputIcon {
+  color: #2d6a4f;
+}
+
+/* ── Error ──────────────────────────────────────── */
+
+.error {
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-align: center;
+  animation: shake 0.4s ease;
+}
+
+/* ── Submit ─────────────────────────────────────── */
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(145deg, #2d6a4f, #40916c);
+  border: none;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 4px;
+  box-shadow: 0 4px 20px rgba(45, 106, 79, 0.25);
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submitBtn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255,255,255,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(45, 106, 79, 0.35);
+}
+
+.submitBtn:hover::after {
+  opacity: 1;
+}
+
+.submitBtn:active {
+  transform: translateY(0);
+}
+
+.submitBtn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ── Divider ────────────────────────────────────── */
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 4px 0;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.dividerText {
+  font-family: 'Sora', sans-serif;
+  font-size: 11px;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/* ── Hint link ──────────────────────────────────── */
+
+.hint {
+  margin-top: 28px;
+  text-align: center;
+  font-family: 'Sora', sans-serif;
+  font-size: 13px;
+  color: #6b7280;
+  animation: fadeSlideUp 0.6s ease 0.3s both;
+}
+
+.hintLink {
+  color: #2d6a4f;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 4px;
+  transition: color 0.2s;
+}
+
+.hintLink:hover {
+  color: #1b4332;
+  text-decoration: underline;
+}
+
+/* ── Right panel: image side ────────────────────── */
+
+.imagePanel {
+  flex: 0 0 60%;
+  position: relative;
+  overflow: hidden;
+  display: none; /* hidden on mobile */
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% center;
+  transition: transform 12s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.imagePanel:hover .bgImage {
+  transform: scale(1.05);
+}
+
+/* dark gradient overlay for text readability */
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(27, 67, 50, 0.7) 0%,
+    rgba(27, 67, 50, 0.15) 40%,
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.imageContent {
+  position: absolute;
+  bottom: 48px;
+  left: 48px;
+  right: 48px;
+  z-index: 2;
+}
+
+.imageQuote {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.35;
+  margin-bottom: 12px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.imageCaption {
+  font-family: 'Sora', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (min-width: 768px) {
+  .imagePanel {
+    display: block;
+  }
+}
+
+/* Tỉ lệ form/ảnh đã được set ở .formPanel và .imagePanel phía trên */
+
+@media (max-width: 767px) {
+  .formPanel {
+    padding: 32px 24px;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .brand {
+    margin-bottom: 36px;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}
+
+/* ── Animations ─────────────────────────────────── */
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}

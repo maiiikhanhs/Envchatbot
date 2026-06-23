@@ -1,0 +1,26 @@
+name: chatbot_datn
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: chatbot_datn_mongodb
+    restart: "no"
+    ports:
+      - "27019:27017"
+    environment:
+      MONGO_INITDB_DATABASE: chatbot_datn
+    volumes:
+      - mongodb_data:/data/db
+
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chatbot_datn_chromadb
+    restart: "no"
+    ports:
+      - "8000:8000"
+    volumes:
+      - chromadb_data:/chroma/chroma
+
+volumes:
+  mongodb_data:
+  chromadb_data:

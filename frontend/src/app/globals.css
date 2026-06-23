@@ -1,0 +1,439 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ── Design Tokens (Warm Linen — Balanced) ──────── */
+:root {
+  /* Layout colors */
+  --bg-main: #f0ede8;
+  --bg-header: #23201c;
+  --bg-left: #f5f3ef;
+  --bg-right: #e2ddd3;
+  --bg-sidebar: #ede8df;
+
+  /* Component colors */
+  --bg-card: #fafaf8;
+  --bg-card-dark: #f6f3ee;
+  --bg-input: #fafaf8;
+  --bg-user-bubble: #10b981;
+  --bg-assistant-bubble: #fafaf8;
+  --bg-hover: #ece9e3;
+  --bg-hover-dark: #e3ddd4;
+
+  /* Text colors */
+  --text-header: #f0ede8;
+  --text-primary: #1c1916;
+  --text-secondary: #4a443c;
+  --text-muted: #847d74;
+  --text-primary-dark: #1c1916;
+  --text-secondary-dark: #4a443c;
+  --text-muted-dark: #847d74;
+
+  /* Accent & Borders */
+  --accent: #10b981;
+  --accent-hover: #059669;
+  --accent-glow: rgba(16, 185, 129, 0.15);
+  --border: #dedad2;
+  --border-light: #dedad2;
+  --border-dark: #d8d3c9;
+  --shadow-sm: 0 1px 2px 0 rgba(50, 40, 25, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(50, 40, 25, 0.09), 0 2px 4px -1px rgba(50, 40, 25, 0.05);
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* ── Reset ───────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+input,
+textarea {
+  cursor: text;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-left);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── App Layout ──────────────────────────────────── */
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ── Top Bar (Style 4) ────────────────────────────── */
+
+.topbar {
+  height: 60px;
+  background: var(--bg-header);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  flex-shrink: 0;
+  color: var(--text-header);
+  position: relative;
+  z-index: 10;
+}
+
+.topbarLeft {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: default;
+  user-select: none;
+}
+
+.topbarCenter {
+  display: flex;
+  gap: 32px;
+  height: 100%;
+}
+
+.topTab {
+  background: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #888;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  height: 100%;
+}
+
+.topTab:hover {
+  color: #ccc;
+}
+
+.topTab.active {
+  color: #fff;
+  border-bottom-color: var(--accent);
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.topbarAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: flex;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── User Menu ───────────────────────────────────── */
+
+.userMenuContainer {
+  position: relative;
+}
+
+.topbarAvatar {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.userDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: var(--bg-card-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  width: 200px;
+  padding: 8px;
+  box-shadow: 0 10px 30px rgba(50, 40, 25, 0.12);
+  animation: slideDown 0.2s ease;
+  z-index: 100;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.userInfo {
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.userName {
+  font-weight: 600;
+  color: var(--text-primary-dark);
+  font-size: 14px;
+}
+
+.dropdownLogoutBtn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+}
+
+.dropdownLogoutBtn:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.dropdownReportBtn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--text-primary-dark);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+  margin-bottom: 4px;
+}
+
+.dropdownReportBtn:hover {
+  background: var(--bg-hover-dark);
+}
+
+/* ── Global Confirm Modal ─────────────────────────── */
+
+.globalConfirmOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.15s ease;
+}
+
+.globalConfirmDialog {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px 24px 20px;
+  width: 340px;
+  max-width: 90vw;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(50, 40, 25, 0.15);
+}
+
+.globalConfirmIcon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 16px;
+  background: rgba(239, 68, 68, 0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globalConfirmTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.globalConfirmText {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+.globalConfirmActions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.globalConfirmCancel {
+  flex: 1;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.globalConfirmCancel:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.globalConfirmActionBtn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.globalConfirmActionBtn:hover {
+  background: #dc2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.35);
+}
+
+.topbarHamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-header);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+/* ── Main Split Area ──────────────────────────────── */
+
+.mainSplit {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.chatSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--bg-left);
+}
+
+.chatSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(#ccc8c0 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.chatSection>* {
+  z-index: 1;
+}
+
+.sidebarOverlay {
+  position: fixed;
+  inset: 0;
+  top: 60px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 90;
+}
+
+.dashboardSection {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  /* Below the topbar */
+  bottom: 0;
+  width: 320px;
+  max-width: 100vw;
+  background: var(--bg-right);
+  color: var(--text-primary-dark);
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid var(--border-dark);
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 100;
+}
+
+.dashboardSection.open {
+  transform: translateX(0);
+}
+
+/* ── Scrollbar ───────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 6px;
+}
+
+@media (max-width: 900px) {
+  .dashboardSection {
+    width: 320px;
+  }
+
+  .topbarCenter {
+    display: none;
+  }
+
+  .topbarHamburger {
+    display: block;
+  }
+}

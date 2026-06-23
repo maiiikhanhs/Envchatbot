@@ -1,0 +1,315 @@
+.message {
+  margin-bottom: 24px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── User ────────────────────────────────────────── */
+
+.user {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user .bubble {
+  background: var(--bg-user-bubble);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 18px 18px 4px 18px;
+  max-width: 70%;
+  font-size: 14.5px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* ── Assistant ───────────────────────────────────── */
+
+.assistant {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.assistant .bubble {
+  background: var(--bg-assistant-bubble);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  padding: 16px 20px;
+  border-radius: 4px 16px 16px 16px;
+  max-width: 85%;
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--text-primary);
+}
+
+/* ── Markdown content ────────────────────────────── */
+
+.markdownContent {
+  word-wrap: break-word;
+}
+
+.markdownContent :global(p) {
+  margin: 0 0 6px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.markdownContent :global(p:last-child) {
+  margin-bottom: 0;
+}
+
+/* Collapse consecutive blank lines rendered by pre-wrap */
+.markdownContent br+br {
+  display: none;
+}
+
+.markdownContent :global(ul),
+.markdownContent :global(ol) {
+  padding-left: 20px;
+  margin: 2px 0 6px;
+}
+
+.markdownContent :global(ul) {
+  list-style-type: var(--list-style, disc);
+}
+
+.markdownContent :global(ol) {
+  list-style-type: decimal;
+}
+
+.markdownContent :global(ol ul) {
+  margin-top: 6px;
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+
+.markdownContent :global(h1),
+.markdownContent :global(h2),
+.markdownContent :global(h3) {
+  color: var(--text-primary);
+  margin: 6px 0 4px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.markdownContent :global(h1) {
+  font-size: 18px;
+}
+
+.markdownContent :global(h2) {
+  font-size: 16px;
+}
+
+.markdownContent :global(h3) {
+  font-size: 15px;
+}
+
+.markdownContent :global(li) {
+  margin-bottom: 2px;
+  color: var(--text-secondary);
+}
+
+.markdownContent :global(strong) {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.markdownContent :global(table.kvTable) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 8px 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.markdownContent :global(table.kvTable caption) {
+  caption-side: top;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.markdownContent :global(table.kvTable th),
+.markdownContent :global(table.kvTable td) {
+  border-bottom: 1px solid var(--border);
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+  color: var(--text-secondary);
+}
+
+.markdownContent :global(table.kvTable th) {
+  width: 34%;
+  color: var(--text-primary);
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.markdownContent :global(table.kvTable tr:last-child th),
+.markdownContent :global(table.kvTable tr:last-child td) {
+  border-bottom: none;
+}
+
+.markdownContent :global(.tableScroll) {
+  width: 100%;
+  overflow-x: auto;
+  margin: 10px 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.markdownContent :global(table.dataTable) {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.markdownContent :global(table.dataTable th),
+.markdownContent :global(table.dataTable td) {
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 7px 9px;
+  text-align: left;
+  vertical-align: top;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.markdownContent :global(table.dataTable th) {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: var(--text-primary);
+  font-weight: 600;
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.markdownContent :global(table.dataTable tr:last-child td) {
+  border-bottom: none;
+}
+
+.markdownContent :global(table.dataTable th:last-child),
+.markdownContent :global(table.dataTable td:last-child) {
+  border-right: none;
+}
+
+/* ── File chip ───────────────────────────────────── */
+
+.fileChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+/* ── Responsive ──────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .user .bubble {
+    max-width: 85%;
+  }
+
+  .assistant .bubble {
+    max-width: 95%;
+  }
+}
+
+/* ── Sources ─────────────────────────────────────── */
+.sourcesContainer {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--border);
+}
+
+.sourcesTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.sourceList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sourceItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background-color: var(--bg-hover);
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: help;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+}
+
+.sourceItem:hover {
+  background-color: rgba(16, 185, 129, 0.05);
+  border-color: rgba(16, 185, 129, 0.2);
+  transform: translateX(4px);
+}
+
+.sourceIndex {
+  font-weight: 700;
+  color: var(--text-primary);
+  background: var(--border);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.sourceFile {
+  color: var(--text-secondary);
+}
+
+/* Make sure the badge outputted by formatMarkdown works globally inside the component */
+.assistant .bubble :global(.sourceBadge) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 0 4px;
+  padding: 0 4px;
+  cursor: help;
+  vertical-align: super;
+  transition: all 0.2s ease;
+}
+
+.assistant .bubble :global(.sourceBadge):hover {
+  background-color: var(--accent);
+  color: white;
+  transform: scale(1.1);
+}
